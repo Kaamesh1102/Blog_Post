@@ -23,7 +23,7 @@ def login():
     if not email or not password:
         return jsonify({"message" : "invalid inputs"}),400
     
-    user = datastore.find_user(email=email)
+    user = datastore.find_user(email=email) 
 
     if not user:
         return jsonify({"message" : "invalid email"}),400
